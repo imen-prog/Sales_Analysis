@@ -1,0 +1,262 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block content %}
+    
+        
+        <div class="w-100">
+        {% include 'layouts/header.html' %}
+            <div class="my-3 mx-3">
+        
+        <div class="d-flex">
+            <div class="col-3 card mx-3">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">
+                        Total ventes
+                    </h5>
+                    <div>
+                        <canvas id="total-views"></canvas>
+                    </div>
+                    <h3 class="card-text text-end">$70 939,385</h3>
+                </div>
+
+            </div>
+            <div class="col-3 card mx-3">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">
+                        Top Pays
+                    </h5>
+                    <h6 class="card-title text-primary">
+                       928 ventes
+                    </h6>
+                    <div>
+                        <canvas id="country-views"></canvas>
+                    </div>
+                    <h3 class="card-text text-end">USA</h3>
+                </div>
+
+            </div>
+            <div class="col-3 card mx-3">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">
+                        Top client 
+                    </h5>
+                    <h6 class="card-title text-primary">
+                        259 ventes
+                    </h6>
+                    
+                    <h3 class="card-text text-end">Euro Shopping Channel</h3>
+                </div>
+
+            </div>
+        </div>
+               
+        <div class="mx-3 my-5">
+            <h3 class="text-center"> Ligne de Produits</h3>
+            <div class="bg-capacity-25 px-5 py-3 rounded">
+                <canvas id="prod"></canvas>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div>
+                <table id="myTbale">
+                    <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns"><div class="datatable-top">
+                        <div class="datatable-dropdown">
+                                <label>
+                                    <select class="datatable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="-1">All</option></select> entries per page
+                                </label>
+                            </div>
+                        <div class="datatable-search">
+                                <input class="datatable-input" placeholder="Search..." type="search" title="Search within table" aria-controls="demo-table">
+                            </div>
+                    </div>
+                    <div class="datatable-container"><table id="demo-table" class="datatable-table"><thead><tr><th data-sortable="true" style="width: 10.553398058252426%;"><button class="datatable-sorter">
+                                          ORDERNUMBER
+                                        </button>
+                                    </th>
+                                    <th data-sortable="true" style="width: 10.87378640776699%;">
+                                        <button class="datatable-sorter">QUANTITYORDERED</button>
+                                    </th>
+                                    <th data-sortable="true" style="width: 10.87378640776699%;">
+                                        <button class="datatable-sorter">PRICEEACH</button>
+                                    </th>
+                                   
+                                    <th data-sortable="true" style="width: 10.87378640776699%;">
+                                        <button class="datatable-sorter">SALES</button>
+                                    </th>
+                                    <th data-format="YYYY/DD/MM" data-sortable="true" data-type="date" style="width: 19.41747572815534%;">
+                                            <button class="datatable-sorter">ORDERDATE</button>
+                                    </th>
+                                    <th data-sortable="true" style="width: 10.87378640776699%;">
+                                        <button class="datatable-sorter">STATUS</button>
+                                    </th>
+                                    <th data-sortable="true" style="width: 10.87378640776699%;">
+                                        <button class="datatable-sorter">PRODUCTLINE</button>
+                                    </th>
+                        
+                                    <th data-sortable="true" class="red" style="width: 20.97087378640777%;"><button class="datatable-sorter">CUSTOMERNAME</button>
+                                    </th>
+                                    
+                                    <th data-sortable="true" style="width: 10.87378640776699%;">
+                                        <button class="datatable-sorter">COUNTRY</button>
+                                    </th>
+                                
+                                </tr>
+                            </thead>
+                                    
+                            <tbody>
+                                <tr data-index="0">
+                                    <td>10107</td>
+                <td>30</td>
+                <td>95.70</td>
+                
+                <td>2871.00</td>
+                <td>2021-02-24</td>
+                
+                <td>Shipped</td>
+                <td>Motorcycles</td>
+                
+                <td>Land of Toys Inc.</td>
+               
+                <td>NYC</td>
+              
+            </tr>
+            <tr data-index="1">
+                <td>10121</td>
+        <td>34</td>
+        <td>81.35</td>
+       
+        <td>2765.90</td>
+        <td>2021-05-07</td>
+       
+        <td>Shipped</td>
+        <td>Motorcycles</td>
+        
+        <td>Reims Collectables</td>
+       
+        <td>France</td>
+       
+            </tr>
+            <tr data-index="2">
+                <td>10134</td>
+        <td>41</td>
+        <td>94.74</td>
+      
+        <td>3884.34</td>
+        <td>2021-07-01</td>
+        
+        <td>Shipped</td>
+        <td>Motorcycles</td>
+       
+        <td>Lyon Souveniers</td>
+     
+       
+        <td>France</td>
+       
+            </tr>
+            <tr data-index="3">
+                <td>10145</td>
+                <td>45</td>
+                <td>83.26</td>
+            
+                <td>3746.70</td>
+                <td>2021-08-25</td>
+             
+                <td>Shipped</td>
+                <td>Motorcycles</td>
+               
+                <td>Toys4GrownUps.com</td>
+            
+                <td>USA</td>
+               
+            </tr>
+            <tr data-index="4">
+                <td>10145</td>
+                <td>45</td>
+                <td>83.26</td>
+               
+                <td>3746.70</td>
+                <td>2021-08-25</td>
+               
+                <td>Shipped</td>
+                <td>Motorcycles</td>
+              
+                <td>Toys4GrownUps.com</td>
+                
+                <td>USA</td>
+               
+            </tr>
+            <tr data-index="5">
+                <td>10350</td>
+        <td>20</td>
+        <td>112.22</td>
+        
+        <td>2244.40</td>
+        <td>2022-12-02</td>
+      
+        <td>Shipped</td>
+        <td>Ships</td>
+       
+        <td>Euro Shopping Channel</td>
+      
+        <td>Spain</td>
+        
+        
+            </tr>
+            <tr data-index="6">
+                <td>10373</td>
+        <td>29</td>
+        <td>137.19</td>
+        
+        <td>3978.51</td>
+        <td>2023-01-31</td>
+      
+        <td>Shipped</td>
+        <td>Ships</td>
+       
+        <td>Oulu Toy Supplies, Inc.</td>
+       
+        <td>Finland</td>
+       
+        
+            </tr>
+            <tr data-index="7">
+                <td>10386</td>
+        <td>43</td>
+        <td>125.99</td>
+       
+        <td>5417.57</td>
+        <td>2023-03-01</td>
+      
+        <td>Resolved</td>
+        <td>Ships</td>
+       
+        <td>Euro Shopping Channel</td>
+      
+        <td>Spain</td>
+      
+        
+            </tr>
+           
+        
+        </tbody>
+    </table>
+    </div>
+                    </div>
+                </table>
+            </div>
+        </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'assets/js/index.js' %}"></script>
+{% endblock %}
